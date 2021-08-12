@@ -26,7 +26,7 @@ def douhao_split(): # 适用场景 111.111.111.111,111,111,111,112
                     f.write(url_new + '\n')
             else:
                 with open('./urls_1_output.txt', 'a+') as f:
-                    f.write('\n' + urls[i])
+                    f.write(urls[i] + '\n')
 
 def ip_split_one(): #适用场景 111.111.111.111-111.111.111.129
     with open('./urls_2.txt','r') as f:
@@ -52,7 +52,6 @@ def ip_split_one(): #适用场景 111.111.111.111-111.111.111.129
             else:
                 with open('./urls_2_output.txt', 'a+') as f:
                     f.write(urls[i] + '\n')
-
 
 def add_head_http():
     http_ip = ''
@@ -94,4 +93,3 @@ if __name__ == '__main__':
         print( RED + '请将目标IP放入urls_3.txt,输出结果在urls_3_output.txt' + ENDC)
         input(RED + '按任意键继续' + ENDC)
         add_head_http()
-
